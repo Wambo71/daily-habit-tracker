@@ -1,0 +1,28 @@
+{
+  "name": "habit-tracker-api",
+  "version": "1.0.0",
+  "description": "REST API for daily habit tracking",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "habit",
+    "tracker",
+    "REST",
+    "API"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "shell": "^0.12.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
