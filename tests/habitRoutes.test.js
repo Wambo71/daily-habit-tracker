@@ -21,10 +21,11 @@ describe('Habit Tracker API', () => {
     });
 
     it('should filter active habits', async () => {
+      const habit = habitStore.findAll()[0];
       // First deactivate a habit
       await request(app)
-        .put('/api/habits')
-        .send({ id: habitStore.findAll()[0].id, isActive: false });
+        .put(`/api/habits/${habit.id}`)
+        .send({ isActive: false });
 
       const response = await request(app)
         .get('/api/habits?active=true');
